@@ -1,0 +1,7 @@
+.open {
+    color: red;
+}
+.closed {
+    color: green;
+    text-decoration: line-through;
+}
