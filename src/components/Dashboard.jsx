@@ -12,8 +12,7 @@ const Dashboard = () => {
      const [todos, setToDos] = useState(items);
 
     const toggleItem = (item) => {
-         item.isOpen = !item.isOpen
-        console.log(todos)
+         item.isOpen = !item.isOpen;
         setToDos([...todos])
     };
 
