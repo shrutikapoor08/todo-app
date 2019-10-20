@@ -1,12 +1,7 @@
 import React, {useState} from 'react';
 import './style.css';
+import items from './items';
 
-const items = [
-    { name: "do this", isOpen: true},
-    { name: "do that", isOpen: true },
-    { name: "clean shit", isOpen: true},
-    { name: "close the toilet seat", isOpen: true}
-];
 
 const Dashboard = () => {
      const [todos, setToDos] = useState(items);
