@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import  items  from './items';
+import items from './items';
 
 const AddItem = () => {
     const [value, setValue] = useState("");
@@ -9,16 +9,16 @@ const AddItem = () => {
     };
 
     const submitHandler = (event) => {
-        items.push(value);
+        items.push({name: value, isOpen: true});
         event.preventDefault();
     };
 
-return (
-<div>
-<label htmlFor="item">Item</label>
-<input type="text" id="name" name="name" required size="10" onChange={onChangeHandler}/>
-<button onClick={submitHandler}>Add Item</button>
-</div>)
+    return (
+        <div>
+            <label htmlFor="item">Item</label>
+            <input type="text" id="name" name="name" required size="10" onChange={onChangeHandler}/>
+            <button onClick={submitHandler}>Add Item</button>
+        </div>)
 
 };
 
