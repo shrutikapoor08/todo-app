@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import './style.css';
-import axios from 'axios'
 import items from './items';
 import AddItem from './AddItem';
 
@@ -8,25 +7,24 @@ import AddItem from './AddItem';
 const Dashboard = () => {
     const [todos, setToDos] = useState([]);
 
-    useEffect( () => {
+    useEffect(() => {
         async function fetchData() {
-        // const test = await axios('/items');
-        const test = items;
-        setToDos(test);
+            const test = items;
+            setToDos(test);
         };
         fetchData();
     })
 
     const toggleItem = (item) => {
-         item.isOpen = !item.isOpen;
+        item.isOpen = !item.isOpen;
         setToDos([...todos])
     };
 
 
-return (
+    return (
         <div>
             <ul>
-            <AddItem />
+                <AddItem/>
                 {todos && todos.map(item =>
                     <li onClick={() => toggleItem(item)} className={item.isOpen ? 'open' : 'closed'}>
                         {item.name}
@@ -35,6 +33,7 @@ return (
             </ul>
         </div>
 
-)};
+    )
+};
 
 export default Dashboard;
