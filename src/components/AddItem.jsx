@@ -1,19 +1,14 @@
-import React, {useState, useEffect} from 'react';
-
+import React, { useState, useEffect } from "react";
 
 const AddItem = () => {
-    const submitHandler = () => {
-        console.log('teschbdhvd')
-        return false;
-    };
 
-return (
-<form onSubmit={submitHandler}>
-<label htmlFor="item">Item</label>
-<input type="text" id="name" name="name" required size="10" />
-<button type="submit">Add Item</button>
-</form>)
-
+    return (
+    <form onSubmit={ (event) => console.log(event.target)}>
+      <label htmlFor="item">Item</label>
+      <input type="text" id="name" name="name" required size="10" />
+      <button type="submit">Add Item</button>
+    </form>
+  );
 };
 
 export default AddItem;
