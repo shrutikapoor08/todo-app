@@ -1,10 +1,17 @@
-import React from "react";
 import Dashboard from "./Dashboard";
+import Context from "../context";
+import reducer from '../reducer';
+import React, {useReducer, useContext} from 'react';
 
 const App = () => {
-    return (
-            <Dashboard />
-    )
+  const initialState = useContext(Context);
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <Context.Provider value={{ state, dispatch }}>
+      <Dashboard />
+    </Context.Provider>
+  );
 };
 
 export default App;

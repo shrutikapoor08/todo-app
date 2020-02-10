@@ -1,0 +1,8 @@
+
+{
+    "0" : { "name": "do this", "isOpen": true},
+    "1" : { "name": "do that", "isOpen": true },
+    "2" : { "name": "clean shit", "isOpen": true},
+    "3" : { "name": "close the toilet seat", "isOpen": true}
+}
+
